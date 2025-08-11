@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YUNAKA COMPUTER — Jual Beli Laptop & Service Komputer/Laptop</title>
+  <meta name="description" content="Jual beli laptop baru & bekas bergaransi, service komputer/laptop, upgrade SSD, instal ulang, cleaning, dan perawatan. Cepat, transparan, bergaransi." />
+  <meta name="theme-color" content="#2978f0" />
+  <!-- Favicon: gunakan PNG logo jika tersedia -->
+  <link rel="icon" type="image/png" href="logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="dns-prefetch" href="//images.unsplash.com">
+  <link rel="canonical" href="https://contoh-yunaka-computer.com/" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1400&auto=format&fit=crop">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <script>
+    // Tailwind config – tetap minimal agar parsing cepat
+    tailwind = window.tailwind || {}; 
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: {
+              green: '#2978f0',
+              primary: '#2978f0',
+              accent: '#1aa9f5',
+              dark: '#2152b2',
+              black: '#020202'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root{--brand-g1:#1aa9f5;--brand-g2:#2978f0;--brand-g3:#2152b2;--brand-b:#020202}
+    .brand-gradient{background-image:linear-gradient(135deg,var(--brand-g1),var(--brand-g2),var(--brand-g3))}
+    .text-gradient{background:linear-gradient(135deg,var(--brand-g1),var(--brand-g2),var(--brand-g3));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+    .glass{backdrop-filter:blur(8px);background:rgba(255,255,255,.7)}
+
+    /* --- Footer (static dark helpers) --- */
+    footer{background:#010E19;color:#e5e7eb}
+    footer a{color:#e5e7eb}
+    footer a:hover{color:#ffffff}
+    footer .social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:9999px;border:1px solid rgba(255,255,255,.18)}
+    footer .pill{border-radius:9999px;padding:.5rem 1rem;border:1px solid rgba(255,255,255,.18);color:#e5e7eb}
+    @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
+  </style>
+  <!-- Favicon fallback (gradient SVG) jika PNG tidak ada -->
+  <script>
+    (function(){
+      try {
+        if (document.querySelector('link[rel="icon"]')) return;
+        const r = getComputedStyle(document.documentElement);
+        const g1 = r.getPropertyValue('--brand-g1').trim() || '#1aa9f5';
+        const g2 = r.getPropertyValue('--brand-g2').trim() || '#2978f0';
+        const g3 = r.getPropertyValue('--brand-g3').trim() || '#2152b2';
+        const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>
+          <defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+            <stop offset='0' stop-color='${g1}'/>
+            <stop offset='0.5' stop-color='${g2}'/>
+            <stop offset='1' stop-color='${g3}'/>
+          </linearGradient></defs>
+          <rect width='64' height='64' rx='14' fill='url(#g)'/>
+          <path d='M20 43 L32 18 L44 43' stroke='white' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/>
+        </svg>`;
+        const link = document.createElement('link');
+        link.rel = 'icon';
+        link.type = 'image/svg+xml';
+        link.href = 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+        document.head.appendChild(link);
+      } catch (e) { /* no-op */ }
+    })();
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 selection:bg-brand-green/20">
+  <!-- Top Bar -->
+  <div class="w-full brand-gradient text-white text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between">
+      <p class="font-medium">YUNAKA COMPUTER — Solusi Laptop & Service Bergaransi</p>
+      <div class="hidden md:flex items-center gap-4">
+        <a href="https://wa.me/6285255877227?text=Halo%20YUNAKA%20COMPUTER%2C%20saya%20ingin%20tanya%20produk%2Fservice" class="underline underline-offset-4">WhatsApp: +62 852-5587-7227</a>
+        <span>|</span>
+        <a href="#lokasi" class="underline underline-offset-4">Lihat Lokasi</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navbar -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3" aria-label="Beranda">
+        <img src="/image/logo.png" class="w-8 h-8 rounded-xl object-contain shadow bg-white" alt="YUNAKA COMPUTER logo" />
+        <div class="leading-tight">
+          <div class="font-extrabold tracking-tight">YUNAKA COMPUTER</div>
+          <div class="text-xs text-slate-500">Laptop • Service • Aksesoris</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#beranda" class="hover:text-brand-green">Beranda</a>
+        <a href="#produk" class="hover:text-brand-green">Produk</a>
+        <a href="#layanan" class="hover:text-brand-green">Layanan</a>
+        <a href="#keunggulan" class="hover:text-brand-green">Keunggulan</a>
+        <a href="#partner" class="hover:text-brand-green">Partner</a>
+        <a href="#testimoni" class="hover:text-brand-green">Testimoni</a>
+        <a href="#kontak" class="px-4 py-2 rounded-full text-white brand-gradient shadow">Hubungi Kami</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-300" aria-label="Buka menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <div class="max-w-7xl mx-auto px-4 py-3 grid gap-3 text-sm">
+        <a href="#beranda" class="py-2">Beranda</a>
+        <a href="#produk" class="py-2">Produk</a>
+        <a href="#layanan" class="py-2">Layanan</a>
+        <a href="#keunggulan" class="py-2">Keunggulan</a>
+        <a href="#partner" class="py-2">Partner</a>
+        <a href="#testimoni" class="py-2">Testimoni</a>
+        <a href="#kontak" class="py-2">Kontak</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="beranda" class="relative">
+    <div class="absolute inset-0 brand-gradient opacity-10" aria-hidden="true"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-20 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">Jual Beli <span class="text-gradient">Laptop</span> & Service <span class="text-gradient">Komputer/Laptop</span> Bergaransi</h1>
+        <p class="mt-4 text-slate-600 text-lg">Cek stok laptop baru & bekas berkualitas, plus layanan service cepat: instal ulang, upgrade SSD, ganti baterai/layar, & cleaning. Transparan, cepat, dan ramah di kantong.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#produk" class="px-5 py-3 rounded-xl bg-brand-green text-white shadow hover:opacity-90">Lihat Produk</a>
+          <a href="https://wa.me/6285255877227?text=Halo%20saya%20ingin%20service%20laptop" class="px-5 py-3 rounded-xl border border-brand-green text-brand-green hover:bg-brand-green/5" aria-label="Chat WhatsApp layanan service">Chat WhatsApp</a>
+        </div>
+        <dl class="mt-8 grid grid-cols-3 gap-4 text-center">
+          <div class="p-4 rounded-2xl bg-white shadow-sm border"><dt class="text-sm text-slate-500">Garansi</dt><dd class="text-2xl font-bold">30–90 Hari</dd></div>
+          <div class="p-4 rounded-2xl bg-white shadow-sm border"><dt class="text-sm text-slate-500">Pengerjaan</dt><dd class="text-2xl font-bold">Cepat</dd></div>
+          <div class="p-4 rounded-2xl bg-white shadow-sm border"><dt class="text-sm text-slate-500">Rating</dt><dd class="text-2xl font-bold">4.9/5</dd></div>
+        </dl>
+      </div>
+      <div class="relative">
+        <div class="absolute -inset-2 rounded-3xl brand-gradient opacity-20 blur" aria-hidden="true"></div>
+        <div class="relative bg-white rounded-3xl p-4 md:p-6 shadow-xl border">
+          <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1400&auto=format&fit=crop" alt="Laptop & Service" class="rounded-2xl object-cover w-full h-64 md:h-80" width="1200" height="640" decoding="async" fetchpriority="high"/>
+          <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+            <div class="p-3 rounded-xl bg-slate-100">✅ Cek Hardware</div>
+            <div class="p-3 rounded-xl bg-slate-100">⚡ Upgrade SSD</div>
+            <div class="p-3 rounded-xl bg-slate-100">🧰 Instal Ulang</div>
+            <div class="p-3 rounded-xl bg-slate-100">🧽 Cleaning</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produk -->
+  <section id="produk" class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+    <div class="flex items-end justify-between gap-4">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">Produk Pilihan</h2>
+        <p class="text-slate-600 mt-2">Laptop baru & bekas yang sudah lulus QC, siap pakai, dan bergaransi.</p>
+      </div>
+      <a href="https://wa.me/6285255877227?text=Halo%20mau%20tanya%20stok%20laptop" class="text-sm px-4 py-2 rounded-full border border-slate-300 hover:bg-slate-100">Cek Stok via WhatsApp</a>
+    </div>
+
+    <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <article class="bg-white border rounded-2xl p-4 shadow-sm hover:shadow-md transition">
+        <div class="flex justify-between items-start">
+          <span class="px-2 py-1 text-xs rounded-full bg-emerald-100 text-emerald-700">Refurbished</span>
+          <span class="px-2 py-1 text-xs rounded-full bg-slate-100">Garansi 60 hari</span>
+        </div>
+        <img class="w-full h-40 object-cover rounded-xl mt-3" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=1400&auto=format&fit=crop" alt="Laptop Refurb" loading="lazy" decoding="async" />
+        <h3 class="mt-3 font-semibold">Lenovo ThinkPad T480</h3>
+        <p class="text-sm text-slate-600">i5-8th • 8GB • 256GB SSD • 14” FHD</p>
+        <div class="mt-3 flex items-center justify-between">
+          <div class="text-lg font-extrabold">Rp4.950.000</div>
+          <a href="https://wa.me/6285255877227?text=Halo%20min%20saya%20minat%20ThinkPad%20T480" class="text-sm px-3 py-2 rounded-lg bg-brand-green text-white">Pesan</a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="bg-white border rounded-2xl p-4 shadow-sm hover:shadow-md transition">
+        <div class="flex justify-between items-start">
+          <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-700">Baru</span>
+          <span class="px-2 py-1 text-xs rounded-full bg-slate-100">Garansi Resmi</span>
+        </div>
+        <img class="w-full h-40 object-cover rounded-xl mt-3" src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1400&auto=format&fit=crop" alt="Laptop Baru" loading="lazy" decoding="async" />
+        <h3 class="mt-3 font-semibold">ASUS Vivobook 15</h3>
+        <p class="text-sm text-slate-600">i5-12th • 8GB • 512GB SSD • 15.6”</p>
+        <div class="mt-3 flex items-center justify-between">
+          <div class="text-lg font-extrabold">Rp9.999.000</div>
+          <a href="https://wa.me/6285255877227?text=Halo%20min%20saya%20minat%20ASUS%20Vivobook%2015" class="text-sm px-3 py-2 rounded-lg bg-brand-green text-white">Pesan</a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="bg-white border rounded-2xl p-4 shadow-sm hover:shadow-md transition">
+        <div class="flex justify-between items-start">
+          <span class="px-2 py-1 text-xs rounded-full bg-amber-100 text-amber-700">Best Value</span>
+        </div>
+        <img class="w-full h-40 object-cover rounded-xl mt-3" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1400&auto=format&fit=crop" alt="Laptop Value" loading="lazy" decoding="async" />
+        <h3 class="mt-3 font-semibold">HP ProBook 440 G6</h3>
+        <p class="text-sm text-slate-600">i7-8th • 16GB • 512GB SSD • 14”</p>
+        <div class="mt-3 flex items-center justify-between">
+          <div class="text-lg font-extrabold">Rp6.950.000</div>
+          <a href="https://wa.me/6285255877227?text=Halo%20min%20saya%20minat%20HP%20ProBook%20440%20G6" class="text-sm px-3 py-2 rounded-lg bg-brand-green text-white">Pesan</a>
+        </div>
+      </article>
+    </div>
+
+    <p class="mt-6 text-sm text-slate-500">*Harga dapat berubah sewaktu-waktu. Hubungi kami untuk update stok terbaru.</p>
+  </section>
+
+  <!-- Layanan -->
+  <section id="layanan" class="bg-white border-y">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">Layanan Service & Upgrade</h2>
+      <p class="text-slate-600 mt-2">Transparan, cepat, dan bergaransi. Diagnosa awal gratis*.</p>
+
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Service Card -->
+        <div class="rounded-2xl border p-6 bg-slate-50">
+          <h3 class="font-semibold">Instal Ulang & Optimasi</h3>
+          <ul class="mt-3 text-sm text-slate-600 list-disc pl-5 space-y-1">
+            <li>Instal Windows asli / Linux</li>
+            <li>Driver & aplikasi dasar</li>
+            <li>Tune-up performa</li>
+          </ul>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="text-lg font-extrabold">Rp150.000</span>
+            <a href="https://wa.me/6285255877227?text=Instal%20ulang%20dan%20optimasi" class="px-3 py-2 rounded-lg bg-brand-green text-white text-sm">Order</a>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border p-6 bg-slate-50">
+          <h3 class="font-semibold">Upgrade SSD / RAM</h3>
+          <ul class="mt-3 text-sm text-slate-600 list-disc pl-5 space-y-1">
+            <li>SSD 240–1TB, merk variatif</li>
+            <li>Clone data opsional</li>
+            <li>Garansi resmi</li>
+          </ul>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="text-lg font-extrabold">Mulai Rp250.000*</span>
+            <a href="https://wa.me/6285255877227?text=Upgrade%20SSD%2FRAM" class="px-3 py-2 rounded-lg bg-brand-green text-white text-sm">Order</a>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border p-6 bg-slate-50">
+          <h3 class="font-semibold">Cleaning & Thermal</h3>
+          <ul class="mt-3 text-sm text-slate-600 list-disc pl-5 space-y-1">
+            <li>Pembersihan kipas & heatsink</li>
+            <li>Ganti thermal paste</li>
+            <li>Perawatan berkala</li>
+          </ul>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="text-lg font-extrabold">Rp120.000</span>
+            <a href="https://wa.me/6285255877227?text=Cleaning%20dan%20thermal" class="px-3 py-2 rounded-lg bg-brand-green text-white text-sm">Order</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-4 text-xs text-slate-500">*Diagnosa gratis untuk kasus umum. Biaya dapat berbeda tergantung jenis kerusakan/part.</p>
+
+      <!-- Layanan Kolaborasi -->
+      <div class="mt-12">
+        <h3 class="text-xl md:text-2xl font-extrabold tracking-tight">Layanan Kolaborasi</h3>
+        <p class="text-slate-600 mt-2">Kami juga menyediakan layanan di bawah ini melalui kolaborasi resmi.</p>
+        <div class="mt-6 grid sm:grid-cols-2 gap-6">
+          <div class="rounded-2xl border p-6 bg-slate-50">
+            <h4 class="font-semibold">Pembuatan Website <span class="text-slate-500 text-sm">(bersama Athaya Tech)</span></h4>
+            <ul class="mt-3 text-sm text-slate-600 list-disc pl-5 space-y-1">
+              <li>Company Profile, Toko Online, Booking/Form</li>
+              <li>Integrasi WhatsApp & Google Sheets</li>
+              <li>SEO dasar & performa cepat</li>
+            </ul>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-lg font-extrabold">Konsultasi Gratis</span>
+              <a href="https://wa.me/6285255877227?text=Konsultasi%20pembuatan%20website%20(Athaya%20Tech)" class="px-3 py-2 rounded-lg bg-brand-green text-white text-sm">Tanya</a>
+            </div>
+          </div>
+          <div class="rounded-2xl border p-6 bg-slate-50">
+            <h4 class="font-semibold">Desain, Branding & Social Media <span class="text-slate-500 text-sm">(bersama Intuitiv Visual)</span></h4>
+            <ul class="mt-3 text-sm text-slate-600 list-disc pl-5 space-y-1">
+              <li>Logo & brand identity, brand kit</li>
+              <li>Konten feed/reels & kalender konten</li>
+              <li>Iklan Meta/IG & pengelolaan akun</li>
+            </ul>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-lg font-extrabold">Paket Mulai</span>
+              <a href="https://wa.me/6285255877227?text=Tanya%20paket%20branding%20(Intuitiv%20Visual)" class="px-3 py-2 rounded-lg bg-brand-green text-white text-sm">Tanya</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Keunggulan -->
+  <section id="keunggulan" class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">Kenapa Pilih Kami?</h2>
+        <ul class="mt-6 space-y-3">
+          <li class="flex items-start gap-3"><span class="text-xl">🛡️</span><div><b>Garansi Jelas</b><br><span class="text-slate-600">Garansi 30–90 hari untuk service & produk tertentu.</span></div></li>
+          <li class="flex items-start gap-3"><span class="text-xl">👨‍🔧</span><div><b>Teknisi Berpengalaman</b><br><span class="text-slate-600">Tim bersertifikat, prosedur QC ketat.</span></div></li>
+          <li class="flex items-start gap-3"><span class="text-xl">💬</span><div><b>Konsultasi Gratis</b><br><span class="text-slate-600">Rekomendasi terbaik sesuai kebutuhan & budget.</span></div></li>
+          <li class="flex items-start gap-3"><span class="text-xl">⚡</span><div><b>Pengerjaan Cepat</b><br><span class="text-slate-600">Estimasi transparan, sparepart ready.</span></div></li>
+        </ul>
+      </div>
+      <div class="bg-white border rounded-3xl p-6 shadow-sm">
+        <h3 class="font-semibold">Statistik Singkat</h3>
+        <dl class="mt-4 grid grid-cols-2 gap-4">
+          <div class="p-4 rounded-xl bg-slate-50 border"><dt class="text-sm text-slate-500">Laptop Terjual</dt><dd class="text-2xl font-extrabold">1.200+</dd></div>
+          <div class="p-4 rounded-xl bg-slate-50 border"><dt class="text-sm text-slate-500">Perangkat Diservice</dt><dd class="text-2xl font-extrabold">3.500+</dd></div>
+          <div class="p-4 rounded-xl bg-slate-50 border"><dt class="text-sm text-slate-500">Rata Rating</dt><dd class="text-2xl font-extrabold">4.9/5</dd></div>
+          <div class="p-4 rounded-xl bg-slate-50 border"><dt class="text-sm text-slate-500">Mitra Korporat</dt><dd class="text-2xl font-extrabold">40+</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner -->
+  <section id="partner" class="bg-white border-y">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">Partner</h2>
+          <p class="text-slate-600 mt-2">Kolaborasi resmi untuk layanan website & branding.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 grid sm:grid-cols-2 gap-6">
+        <!-- Athaya Tech -->
+        <div class="rounded-2xl border p-6 bg-slate-50 flex items-center gap-4">
+          <div class="shrink-0">
+            <svg viewBox="0 0 120 48" class="h-12 w-auto" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g-partner-1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="var(--brand-g1)"/>
+                  <stop offset="0.5" stop-color="var(--brand-g2)"/>
+                  <stop offset="1" stop-color="var(--brand-g3)"/>
+                </linearGradient>
+              </defs>
+              <rect rx="10" width="120" height="48" fill="url(#g-partner-1)"/>
+              <text x="60" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="white">ATHAYA TECH</text>
+            </svg>
+          </div>
+          <div>
+            <div class="font-semibold">Athaya Tech</div>
+            <p class="text-sm text-slate-600">Partner pengembangan website & integrasi.</p>
+          </div>
+        </div>
+
+        <!-- Intuitiv Visual -->
+        <div class="rounded-2xl border p-6 bg-slate-50 flex items-center gap-4">
+          <div class="shrink-0">
+            <svg viewBox="0 0 120 48" class="h-12 w-auto" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g-partner-2" x1="1" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="var(--brand-g1)"/>
+                  <stop offset="0.5" stop-color="var(--brand-g2)"/>
+                  <stop offset="1" stop-color="var(--brand-g3)"/>
+                </linearGradient>
+              </defs>
+              <rect rx="10" width="120" height="48" fill="url(#g-partner-2)"/>
+              <text x="60" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="white">INTUITIV VISUAL</text>
+            </svg>
+          </div>
+          <div>
+            <div class="font-semibold">Intuitiv Visual</div>
+            <p class="text-sm text-slate-600">Partner desain, branding & social media.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni -->
+  <section id="testimoni" class="bg-white border-y">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">Apa Kata Pelanggan</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <figure class="rounded-2xl border p-6 bg-slate-50">
+          <blockquote class="text-slate-700">“Upgrade SSD super cepat, laptop jadi ngebut. Adminnya sabar jelasin.”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-500">— Rizal, Mahasiswa</figcaption>
+        </figure>
+        <figure class="rounded-2xl border p-6 bg-slate-50">
+          <blockquote class="text-slate-700">“Beli ThinkPad bekas, kondisi mulus & baterai sehat. Recommended!”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-500">— Sari, Freelancer</figcaption>
+        </figure>
+        <figure class="rounded-2xl border p-6 bg-slate-50">
+          <blockquote class="text-slate-700">“Instal ulang & cleaning rapi. Hasilnya dingin dan stabil.”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-500">— Andi, Karyawan</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak & Lokasi -->
+  <section id="kontak" class="bg-white border-t">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid lg:grid-cols-2 gap-10">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">Hubungi Kami</h2>
+        <p class="mt-2 text-slate-600">Silakan isi formulir atau chat langsung via WhatsApp. Kami siap bantu.</p>
+
+        <form action="#" class="mt-6 grid gap-4">
+          <div>
+            <label class="text-sm text-slate-600">Nama</label>
+            <input type="text" class="mt-1 w-full rounded-xl border p-3" placeholder="Nama Anda" required />
+          </div>
+          <div>
+            <label class="text-sm text-slate-600">Nomor WhatsApp</label>
+            <input type="tel" class="mt-1 w-full rounded-xl border p-3" placeholder="08xxxxxxxxxx" required />
+          </div>
+          <div>
+            <label class="text-sm text-slate-600">Pesan</label>
+            <textarea class="mt-1 w-full rounded-xl border p-3" rows="4" placeholder="Tulis kebutuhan Anda (service/produk)"></textarea>
+          </div>
+          <p class="text-xs text-slate-500">*Dengan mengirim, Anda setuju dengan kebijakan privasi kami.</p>
+          <div class="flex gap-3">
+            <button type="submit" class="px-5 py-3 rounded-xl bg-brand-green text-white">Kirim</button>
+            <a href="https://wa.me/6285255877227?text=Halo%20YUNAKA%20COMPUTER" class="px-5 py-3 rounded-xl border border-brand-green text-brand-green">Chat WhatsApp</a>
+          </div>
+          
+        </form>
+      </div>
+
+      <div id="lokasi" class="rounded-3xl overflow-hidden border shadow-sm h-[420px]">
+        <iframe class="w-full h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=-3.7860901331804637,119.65230812002483&hl=id&z=17&output=embed" title="Peta lokasi YUNAKA COMPUTER"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative bg-[#010E19] text-slate-200 border-t border-slate-800">
+    <div class="h-1 w-full brand-gradient"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 grid gap-10 md:grid-cols-2 lg:grid-cols-4 text-[13px]">
+      <!-- Brand & CTA -->
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="/image/logo.png" class="w-10 h-10 rounded-xl object-contain bg-white shadow" alt="YUNAKA COMPUTER logo" />
+          <div>
+            <div class="font-extrabold tracking-tight">YUNAKA COMPUTER</div>
+            <div class="text-xs text-slate-500">Laptop • Service • Aksesoris</div>
+          </div>
+        </div>
+        <p class="mt-4 text-[13px] text-slate-300">Toko laptop & layanan service terpercaya di Pinrang. Jual beli, upgrade, dan perawatan bergaransi.</p>
+        <a href="https://wa.me/6285255877227?text=Halo%20YUNAKA%20COMPUTER" class="mt-4 inline-flex items-center gap-2 rounded-full bg-[#25D366] text-white px-4 py-2 shadow" aria-label="WhatsApp kami">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M.5 12C.5 5.649 5.649.5 12 .5S23.5 5.649 23.5 12 18.351 23.5 12 23.5c-2.17 0-4.187-.6-5.908-1.649L.5 23.5l1.683-5.39A11.44 11.44 0 0 1 .5 12Zm6.04-1.43c.07-.152.314-.276.454-.29l1.07-.054c.142-.007.318.037.41.16.118.158.377.565.41.607.13.174.258.195.43.111.158-.077.67-.265 1.277-.845.471-.44.79-.987.883-1.154.09-.166.01-.26-.069-.34-.07-.07-.158-.183-.226-.27-.09-.118-.183-.246-.25-.334-.07-.09-.103-.18-.016-.338.07-.158.623-1.516.855-2.08.225-.54.453-.467.62-.46l1.5.012c.13 0 .27.065.343.174.11.16.343.48.37.52.11.16.09.318.006.5-.53 1.114-1.086 1.994-1.22 2.198-.103.16-.228.35-.02.588.64.73 1.21 1.198 1.86 1.55.19.11.31.09.43-.054.131-.158.526-.614.667-.825.15-.212.31-.175.5-.103.19.07 1.21.57 1.42.674.21.103.35.154.4.24.06.09.06.516-.12 1.013-.18.498-.98.944-1.37 1.008-.35.053-.8.075-1.31-.083-.303-.095-.694-.225-1.19-.47-2.091-1.04-3.45-3.4-3.55-3.55-.11-.15-.85-1.17-.85-2.27 0-1.1.35-1.63.54-1.86Z"/></svg>
+          WhatsApp kami
+        </a>
+        <div class="mt-5 social flex items-center gap-3">
+          <a id="soc-ig" href="https://instagram.com/akunanda" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A5.5 5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5Zm5.25-3.5a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25Z"/></svg>
+          </a>
+          <a id="soc-fb" href="https://facebook.com/akunanda" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M13 9h3.5l-.5 3H13v10h-3V12H7V9h3V7.5C10 5 11 3 14.5 3H17v3h-2c-1 0-2 .2-2 1.5V9Z"/></svg>
+          </a>
+          <a id="soc-tt" href="#" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok">
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M16.5 3.5c.6 1.5 1.8 2.7 3.3 3.2V9c-1.5-.1-2.9-.6-4-1.4v5.2a6.3 6.3 0 1 1-5.6-6.3c.3 0 .6 0 .9.1v3.1a3.3 3.3 0 1 0 2.3 3.1V2h3.1v1.5Z"/></svg>
+          </a>
+          <a id="soc-yt" href="#" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a3 3 0 0 0-2.1-2.1C18.9 4.4 12 4.4 12 4.4s-6.9 0-8.4.8a3 3 0 0 0-2.1 2.1C1 8.8 1 12 1 12s0 3.2.4 4.7a3 3 0 0 0 2.1 2.1c1.5.8 8.4.8 8.4.8s6.9 0 8.4-.8a3 3 0 0 0 2.1-2.1C23 15.2 23 12 23 12Zm-13-3 6 3.5-6 3.5V9Z"/></svg>
+          </a>
+          
+        </div>
+      </div>
+
+      <!-- Kontak -->
+      <div>
+        <h3 class="text-[12px] font-semibold tracking-wide text-slate-200 uppercase">Kontak</h3>
+        <ul class="mt-4 space-y-4 text-[13px]">
+          <li class="flex gap-3">
+            <span data-footicon class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/10 text-white shadow-sm">
+              <!-- Address icon OUTLINE -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-12a7 7 0 1 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </span>
+            <div>
+              <div class="font-medium">Alamat</div>
+              <a href="https://maps.google.com/?q=-3.7860901331804637,119.65230812002483" class="text-slate-300 hover:text-white hover:underline">Jl. Ahmad Yani No.39, Pacongang, Kec. Paleteang, Kabupaten Pinrang, Sulawesi Selatan 91215</a>
+              <div class="mt-2">
+                <a id="mapsDirectionBtn" href="https://www.google.com/maps/dir/?api=1&destination=-3.7860901331804637,119.65230812002483" class="pill brand-gradient text-white border-0 inline-flex items-center gap-2">🧭 Arahkan ke Google Maps</a>
+              </div>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span data-footicon class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/10 text-white shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.05-.24 11.36 11.36 0 0 0 3.56.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.22.2 2.42.57 3.56a1 1 0 0 1-.25 1.05l-2.2 2.18Z"/></svg>
+            </span>
+            <div>
+              <div class="font-medium">Telepon / WhatsApp</div>
+              <a href="tel:+6285255877227" class="text-slate-300 hover:text-white hover:underline">+62 852-5587-7227</a>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span data-footicon class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/10 text-white shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+            </span>
+            <div>
+              <div class="font-medium">Email</div>
+              <a href="mailto:halo@yunakacomputer.id" class="text-slate-300 hover:text-white hover:underline">halo@yunakacomputer.id</a>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span data-footicon class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/10 text-white shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 1.75A10.25 10.25 0 1 0 22.25 12 10.26 10.26 0 0 0 12 1.75Zm.75 5.5a.75.75 0 0 0-1.5 0v5a.75.75 0 0 0 .44.68l4 2a.75.75 0 1 0 .66-1.34L12.75 12.8V7.25Z"/></svg>
+            </span>
+            <div>
+              <div class="font-medium">Jam Buka</div>
+              <div class="text-slate-300">Senin–Sabtu • 09.00–20.00</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Layanan -->
+      <div>
+        <h3 class="text-[12px] font-semibold tracking-wide text-slate-200 uppercase">Layanan</h3>
+        <ul class="mt-4 grid gap-2 text-[13px]">
+          <li data-test="service-item" class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full brand-gradient inline-block"></span>Instal Ulang &amp; Optimasi</li>
+          <li data-test="service-item" class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full brand-gradient inline-block"></span>Upgrade SSD / RAM</li>
+          <li data-test="service-item" class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full brand-gradient inline-block"></span>Cleaning &amp; Thermal</li>
+          <li data-test="service-item" class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full brand-gradient inline-block"></span>Pembuatan Website (Athaya Tech)</li>
+          <li data-test="service-item" class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full brand-gradient inline-block"></span>Desain, Branding &amp; Social Media (Intuitiv Visual)</li>
+        </ul>
+      </div>
+
+      <!-- Partner -->
+      <div>
+        <h3 class="text-[12px] font-semibold tracking-wide text-slate-200 uppercase">Partner</h3>
+        <div class="mt-4 grid gap-3">
+          <div data-test="partner-item" class="inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-3">
+            <svg viewBox="0 0 120 36" class="h-7 w-auto" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g-footer-1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="var(--brand-g1)"/>
+                  <stop offset="0.5" stop-color="var(--brand-g2)"/>
+                  <stop offset="1" stop-color="var(--brand-g3)"/>
+                </linearGradient>
+              </defs>
+              <rect rx="8" width="120" height="36" fill="url(#g-footer-1)"/>
+              <text x="60" y="23" text-anchor="middle" font-size="14" font-weight="700" fill="white">ATHAYA TECH</text>
+            </svg>
+            <span class="text-sm">Athaya Tech</span>
+          </div>
+          <div data-test="partner-item" class="inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-3">
+            <svg viewBox="0 0 120 36" class="h-7 w-auto" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g-footer-2" x1="1" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="var(--brand-g1)"/>
+                  <stop offset="0.5" stop-color="var(--brand-g2)"/>
+                  <stop offset="1" stop-color="var(--brand-g3)"/>
+                </linearGradient>
+              </defs>
+              <rect rx="8" width="120" height="36" fill="url(#g-footer-2)"/>
+              <text x="60" y="23" text-anchor="middle" font-size="14" font-weight="700" fill="white">INTUITIV VISUAL</text>
+            </svg>
+            <span class="text-sm">Intuitiv Visual</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-[13px] text-slate-400">
+        <p>© <span id="year"></span> YUNAKA COMPUTER. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:underline hover:text-white">Kebijakan Privasi</a>
+          <a href="#" class="hover:underline hover:text-white">Syarat & Ketentuan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/6285255877227?text=Halo%20YUNAKA%20COMPUTER" class="fixed bottom-5 right-5 bg-[#25D366] text-white px-4 py-3 rounded-full shadow-xl flex items-center gap-2" aria-label="Chat WhatsApp sekarang">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-5 h-5" fill="currentColor"><path d="M4.868 43.132 7.9 35.392a18.1 18.1 0 1 1 6.75 6.708zM20.008 14.9a1.8 1.8 0 0 0-1.388.658 5.9 5.9 0 0 0-1.3 4.238 10.4 10.4 0 0 0 2.2 4.837 18 18 0 0 0 8.5 7.05 7.1 7.1 0 0 0 3 .675 5.5 5.5 0 0 0 2.95-1.05 2 2 0 0 0 .775-1.2 2 2 0 0 0-.1-1.25l-.85-2.025a1.4 1.4 0 0 0-1.012-.875 1.8 1.8 0 0 0-1.7.413l-1.05.938a.8.8 0 0 1-1 .088 13 13 0 0 1-4.875-3.45 13.6 13.6 0 0 1-2.4-3.863.9.9 0 0 1 .225-1.063l.875-.95a1.7 1.7 0 0 0 .35-1.663l-.775-2.025a1.45 1.45 0 0 0-.65-.8 1.7 1.7 0 0 0-.887-.25z"/></svg>
+    <span class="font-semibold">Chat Sekarang</span>
+  </a>
+
+  <script>
+    // ====== UI essentials ======
+    function $(id){ return document.getElementById(id); }
+    window.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = $('menuBtn');
+      const mobileNav = $('mobileNav');
+      if (menuBtn && mobileNav) menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+      const yearEl = $('year'); if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // ====== TESTS (Smoke + Regression — MetaMask removed, footer icons uniform, single Maps button) ======
+      (function(){
+        const tests = [];
+        const add=(name,ok,info='')=>tests.push({name,ok,info});
+        try { add('No MetaMask keywords in HTML', !/ethereum\.request|MetaMask|eth_requestAccounts/i.test(document.documentElement.innerHTML)); } catch(e){ add('No MetaMask keywords in HTML', false, e.message); }
+        try { const dir = document.getElementById('mapsDirectionBtn'); add('Maps direction button exists (single)', !!dir && !document.getElementById('mapsDirectionBtnBottom')); } catch(e){ add('Maps direction button exists (single)', false, e.message); }
+        try { const cta = document.querySelector('a[href^="https://wa.me/"]'); add('WhatsApp CTA present', !!cta); } catch(e){ add('WhatsApp CTA present', false, e.message); }
+        try { 
+          const icons = Array.from(document.querySelectorAll('footer [data-footicon] svg'));
+          const ok = icons.length>=4 && icons.every(svg=>svg.classList.contains('w-4') && svg.classList.contains('h-4'));
+          add('Footer icons uniform size', ok, 'count='+icons.length);
+        } catch(e){ add('Footer icons uniform size', false, e.message); }
+        try { console.groupCollapsed('Smoke Tests'); console.table(tests); console.groupEnd(); } catch(_){}
+      })();
+    });
+  </script>
+
+  <!-- SEO JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "YUNAKA COMPUTER",
+    "image": "Logo.png",
+    "url": "https://yunakacomputer.id",
+    "telephone": "+62-852-5587-7227",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jl. Ahmad Yani No.39, Pacongang, Kec. Paleteang",
+      "addressLocality": "Pinrang",
+      "addressRegion": "Sulawesi Selatan",
+      "postalCode": "91215",
+      "addressCountry": "ID"
+    },
+    "geo": {"@type":"GeoCoordinates","latitude": -3.7860901331804637, "longitude": 119.65230812002483},
+    "hasMap": "https://maps.google.com/?q=-3.7860901331804637,119.65230812002483",
+    "openingHours": "Mo-Sa 09:00-20:00",
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.instagram.com/yunakatech",
+      "https://www.facebook.com/yunakacomputer"
+    ]
+  }
+  </script>
+</body>
+</html>
